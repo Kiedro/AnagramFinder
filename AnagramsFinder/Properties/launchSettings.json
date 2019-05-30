@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AnagramsFinder": {
+      "commandName": "Project",
+      "commandLineArgs": "\"D:\\repos\\AnagramsFinder\\exampleInput.txt\""
+    }
+  }
+}
