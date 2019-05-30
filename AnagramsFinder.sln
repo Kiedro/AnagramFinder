@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28917.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnagramsFinder", "AnagramsFinder\AnagramsFinder.csproj", "{1C3007C5-48EB-4EB8-844F-C48DBA4BBE48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InputData", "InputData", "{463775C3-D898-4E7E-8712-3D807DB18F63}"
+	ProjectSection(SolutionItems) = preProject
+		exampleInput.txt = exampleInput.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnagramFinderTests", "AnagramFinderTests\AnagramFinderTests.csproj", "{971DBCB4-FF3F-44B9-84BE-BCE616601214}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C3007C5-48EB-4EB8-844F-C48DBA4BBE48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C3007C5-48EB-4EB8-844F-C48DBA4BBE48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C3007C5-48EB-4EB8-844F-C48DBA4BBE48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C3007C5-48EB-4EB8-844F-C48DBA4BBE48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{971DBCB4-FF3F-44B9-84BE-BCE616601214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{971DBCB4-FF3F-44B9-84BE-BCE616601214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{971DBCB4-FF3F-44B9-84BE-BCE616601214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{971DBCB4-FF3F-44B9-84BE-BCE616601214}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75A8573C-E074-41FE-B8D4-80D6792ABB6A}
+	EndGlobalSection
+EndGlobal
