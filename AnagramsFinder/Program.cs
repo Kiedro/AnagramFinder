@@ -14,38 +14,37 @@ namespace AnagramsFinder
                 Console.WriteLine("Run program with single arguments - full path to file containing text data");
             }
 
-            var dictionary = new List<IGrouping<string, Word>>();
+            IEnumerable<Word> words;
             try
             {
                 using (var streamReader = new StreamReader(args[0]))
                 {
-                    List<Word> words = new List<Word>();
-                    while (streamReader.EndOfStream == false)
-                    {
-                        var inputLine = streamReader.ReadLine();
-                        if (string.IsNullOrWhiteSpace(inputLine))
-                        {
-                            continue;
-                        }
-                        var word = new Word(inputLine);
-                        words.Add(word);
-                    }
-                    dictionary = words.GroupBy(x => x.SortedCharacters).ToList();
+                    words = DataParser.Parse(streamReader);
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Couldt'n read the file.");
+                Console.WriteLine("Couldn't read the file.");
                 Console.WriteLine(ex.Message);
+                return;
             }
 
-            foreach (var group in dictionary)
+            var processor = new AnagramsProcessor(words);
+
+            Program.PrintResult("Anagrams:", processor.Anagrams);
+            Program.PrintResult("Anagrams with longest words:", processor.LongestAnagrams);
+            Program.PrintResult("Anagrams with most words:", processor.MostWordsInGroup);
+        }
+
+        private static void PrintResult(string message, IEnumerable<IGrouping<string, Word>> result)
+        {
+            Console.WriteLine(message);
+            foreach (var group in result)
             {
-                //Console.WriteLine(group.Key);
-                Console.WriteLine(String.Join(' ', group));
+
+                Console.WriteLine(string.Join(' ', group));
             }
-
-
+            Console.WriteLine();
         }
     }
 }

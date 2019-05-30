@@ -10,11 +10,11 @@ namespace AnagramsFinder
 
         public Word(string word)
         {
-            this.OrginalWord = word;
+            this.OrginalWord = word.Trim();
 
             var characters = OrginalWord.ToLowerInvariant().ToCharArray();
             Array.Sort<char>(characters);
-            this.SortedCharacters = String.Concat(characters);
+            this.SortedCharacters = string.Concat(characters);
         }
 
         public override string ToString()
